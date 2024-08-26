@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>My Symfony Web Application</title>
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="{{ asset('images/logo.png') }}" alt="Logo">
+                </div>
+                <div class="slogan">
+                    <h1>Your Slogan Here</h1>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="nav-buttons">
+                <li><a href="{{ path('app_home') }}" class="btn-nav">Acceuil</a></li>
+                <li><a href="{{ path('app_hyp') }}" class="btn-nav">Hyp</a></li>
+                <li><a href="{{ path('app_ponpon') }}" class="btn-nav">Ponpon</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div class="video-container">
+                <!-- Placeholder for video -->
+                <video controls>
+                    <source src="{{ asset('videos/video.mp4') }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="description">
+                    <h2>A Propos</h2>
+                    <p>Brief description about the video goes here.</p>
+                </div>
+                <div class="forum-button">
+                    <a href="{{ path('app_user') }}" class="btn-forum">Go to Forum</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 Your Company Name. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

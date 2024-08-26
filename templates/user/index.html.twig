@@ -1,0 +1,92 @@
+{# templates/user/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Reborn {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .input-group .input-group-text {
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+            border: 1px solid #ced4da;
+            border-left: none;
+        }
+        .input-group input {
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+            border: 1px solid #ced4da;
+            border-right: none;
+        }
+        
+        .datepicker {
+            z-index: 1000; /* Ensure it's above other elements */
+        }
+
+        .input-group .input-group-text {
+            z-index: 1; /* Ensure it doesn't overlap the datepicker */
+        }
+
+    </style>
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>Information Request</h2>
+        <img src="{{ asset('images/reborn.png') }}" alt="Logo" style="max-width: 100px; height: auto;">
+    </div>
+    
+    
+
+    
+    {{ form_start(form_data) }}
+    
+    <div class="form-group">
+        <label for="firstName">Name</label>
+        <div class="row">
+            <div class="col">
+                {{ form_widget(form_data.nom, {'attr': {'class': 'form-control', 'placeholder': 'First Name', 'id': 'firstName'}}) }}
+            </div>
+            <div class="col">
+                {{ form_widget(form_data.prenom, {'attr': {'class': 'form-control', 'placeholder': 'Last Name', 'id': 'lastName'}}) }}
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-group mt-3">
+        <label for="email">E-mail</label>
+        {{ form_widget(form_data.email, {'attr': {'class': 'form-control', 'placeholder': 'ex: myname@example.com', 'id': 'email'}}) }}
+        <small class="form-text text-muted">example@example.com</small>
+    </div>
+    
+    <div class="form-group mt-3">
+        <label for="phone">Phone Number</label>
+        {{ form_widget(form_data.telephone, {'attr': {'class': 'form-control', 'placeholder': '(000) 000-0000', 'id': 'phone'}}) }}
+        <small class="form-text text-muted">Please enter a valid phone number.</small>
+    </div>
+    
+    <div class="form-group mt-3">
+        <label for="address">Address</label>
+        {{ form_widget(form_data.address, {'attr': {'class': 'form-control', 'placeholder': 'City', 'id': 'address'}}) }}
+    </div>
+    
+    <div class="form-group mt-3">
+        <label for="date">Date</label>
+        <div >
+            {{ form_widget(form_data.date, {'attr': {'class': 'form-control datepicker', 'id': 'date'}}) }}
+            <div class="input-group-append">
+                
+            </div>
+        </div>
+    </div>
+    
+   
+    
+    {{ form_end(form_data) }}
+</div>
+{% endblock %}
+

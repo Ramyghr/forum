@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px; /* Adjust the size of the logo */
+    width: auto;
+}
+
+.slogan h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+nav {
+    background-color: rgba(5, 117, 195);
+    padding: 10px 0;
+}
+
+.nav-buttons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-buttons li {
+    margin: 0 15px;
+}
+
+.btn-nav {
+    background-color: rgba(5, 117, 195);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #0056b3;
+}
+
+.video-container {
+    padding: 20px;
+    flex-grow: 1; /* Ensures the main content takes up available space */
+}
+
+.video-container video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.description {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.forum-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-forum {
+    background-color: rgba(5, 117, 195);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-forum:hover {
+    background-color: #218838;
+}
+
+footer {
+    background-color: rgba(5, 117, 195);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
